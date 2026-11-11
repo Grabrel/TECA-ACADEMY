@@ -1,0 +1,180 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Teca Academia//TJSP 2026//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:TJ-SP Escrevente 2026/2027 — Cronograma
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VEVENT
+UID:teca-insc@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261211
+SUMMARY:Inscrições — período
+DESCRIPTION:Início às 10h (28/10)\; término às 23h59 (10/12) | Preen
+ cher a inscrição no portal Vunesp e conferir dados. Conforme edital d
+ e abertura pp. 11 e 53. | Fonte: Edital nº 02/2026\, p. 11 e 53 | http
+ s://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-reduc@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261031
+SUMMARY:Solicitação de redução da taxa
+DESCRIPTION:A partir das 10h de 28/10\; encerra 23h59 de 30/10 | Somente
+  para quem cumpre os requisitos para redução de taxa. | Fonte: Edital
+  nº 02/2026\, p. 12 e 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-reduc-doc@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261104
+SUMMARY:Envio de documentos — redução de taxa
+DESCRIPTION:Conferir prazo específico no edital | Documentos da solicit
+ ação de redução de taxa. | Fonte: Edital nº 02/2026\, p. 12 e 53 |
+  https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-reduc-list@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Resultado da solicitação de redução da taxa
+DESCRIPTION:Deferimentos e indeferimentos no site da Vunesp. | Fonte: Ed
+ ital nº 02/2026\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-reduc-rec@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261201
+SUMMARY:Recursos sobre redução da taxa
+DESCRIPTION:Para candidatos com pedido indeferido. | Fonte: Edital nº 0
+ 2/2026\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-reduc-dec@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Decisão dos recursos — redução de taxa
+DESCRIPTION:Divulgação prevista no portal da Vunesp. | Fonte: Edital n
+ º 02/2026\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-docs-acao@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261211
+SUMMARY:Envio de documentação e pedidos específicos
+DESCRIPTION:PcD\, condições especiais\, candidatos negros\, indígenas
+  ou quilombolas conforme regras aplicáveis. | Fonte: Edital nº 02/202
+ 6\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-insc-fim@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Último dia de inscrição
+DESCRIPTION:Até 23h59 | A ficha de inscrição é retirada do sistema 
+ às 23h59. | Fonte: Edital nº 02/2026\, p. 11 e 53 | https://www.vunes
+ p.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Revisar compromisso: Último dia de inscrição
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-boleto@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:Último dia para pagamento do boleto
+DESCRIPTION:Respeitar horário bancário | Valor indicado no edital: R$ 
+ 81. Verificar compensação depois de 3 dias úteis. | Fonte: Edital n
+ º 02/2026\, p. 12 e 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Revisar compromisso: Último dia para pagamento do boleto
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-defer-cond@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Resultado de solicitações especiais
+DESCRIPTION:Resultado dos pedidos de PcD\, atendimento especial\, negros
+ \, indígenas e quilombolas. | Fonte: Edital nº 02/2026\, p. 53 | http
+ s://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-rec-cond@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270113
+SUMMARY:Recursos de solicitações especiais
+DESCRIPTION:Para pedidos especiais indeferidos. | Fonte: Edital nº 02/2
+ 026\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-rec-cond-dec@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:Decisão dos recursos especiais
+DESCRIPTION:Resultado das análises de recursos no site da Vunesp. | Fon
+ te: Edital nº 02/2026\, p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-prova@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:PROVA objetiva + redação
+DESCRIPTION:Período da tarde (horário exato a divulgar) | 70 questões
+  de múltipla escolha e redação\, duração total máxima de 5 horas\
+ ; confirmar horário e local no edital de convocação. Aplicação nas
+  sedes das RAJs. | Fonte: Edital nº 02/2026\, p. 27 e 53 | https://www
+ .vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Revisar compromisso: PROVA objetiva + redação
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:teca-gabarito@tjsp2607
+DTSTAMP:20261110T120000Z
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270318
+SUMMARY:Divulgação prevista do gabarito
+DESCRIPTION:Consultar gabarito no portal da Vunesp\; prazo para eventual
+  recurso será divulgado em ato próprio. | Fonte: Edital nº 02/2026\,
+  p. 53 | https://www.vunesp.com.br/TJSP2607
+URL:https://www.vunesp.com.br/TJSP2607
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Revisar compromisso: Divulgação prevista do gabarito
+END:VALARM
+END:VEVENT
+END:VCALENDAR

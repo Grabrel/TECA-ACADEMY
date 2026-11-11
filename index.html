@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071723">
+  <meta name="description" content="Teca Academia: estudo ativo e gamificado para o concurso TJ-SP Escrevente 2026/2027, com calendário fundamentado no edital.">
+  <title>Teca Academia 3.0 · TJ-SP · Missões e Calendário</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <div class="logo"><span class="logo-symbol">T<span>✦</span></span><div><strong>Teca<span class="mint">.Academia</span></strong><small>Temporada TJ-SP · 2026/27</small></div></div>
+      <p class="side-label">ÁREA DO JOGADOR</p>
+      <nav class="main-nav">
+        <button class="nav active" data-route="home"><span class="nav-icon">◈</span> Central de missões</button>
+        <button class="nav" data-route="trails"><span class="nav-icon">▦</span> Trilhas de estudo</button>
+        <button class="nav" data-route="review"><span class="nav-icon">↻</span> Revisão inteligente</button>
+        <button class="nav" data-route="calendar"><span class="nav-icon">▣</span> Calendário do edital</button>
+        <button class="nav" data-route="method"><span class="nav-icon">✧</span> Como aprendemos</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-note"><span>✦ MISSÃO PRINCIPAL</span><strong>Não decore a letra.</strong><small>Explique a regra, reconheça a exceção e aplique em um caso novo.</small></div>
+        <button class="nav" data-route="settings"><span class="nav-icon">⚙</span> Backup e ajustes</button>
+      </div>
+    </aside>
+    <div class="body-column">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="logo-symbol small">T</span><b>TECA ACADEMIA</b></div>
+        <div class="top-info"><span class="status-dot"></span> TJSP2607 · Edital nº 02/2026 <span class="dim">• Versão 3.0</span></div>
+        <div class="top-right"><span id="header-date"></span><span class="xp-badge" id="header-xp">✦ 0 XP</span></div>
+      </header>
+      <main id="app" class="content" tabindex="-1"><div class="loading">Carregando sua academia…</div></main>
+      <footer class="footer">Teca Academia 3.0 · Progresso salvo neste dispositivo · Verifique retificações em <a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noopener noreferrer">Vunesp</a>.</footer>
+    </div>
+  </div>
+  <nav class="mobile-tabs" aria-label="Acesso rápido">
+    <button data-route="home"><span>◈</span>Missões</button><button data-route="trails"><span>▦</span>Trilhas</button><button data-route="review"><span>↻</span>Revisar</button><button data-route="calendar"><span>▣</span>Calendário</button>
+  </nav>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <script src="data/lessons.js"></script>
+  <script src="data/events.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
