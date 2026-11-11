@@ -1,4 +1,4 @@
-/* Teca Academia 3.4 — autenticação por usuário, sem pedir e-mail. */
+/* Teca Academia 3.5 — autenticação por usuário, sem pedir e-mail. */
 'use strict';
 const CFG=window.TECA_CONFIG||{};
 const configured=/^https:\/\/[^\s]+\.supabase\.co\/?$/.test(CFG.supabaseUrl||'') && /^sb_publishable_/.test(CFG.publishableKey||'');
@@ -90,7 +90,7 @@ async function startAcademy(user,profile){if(active)return;active=true;publicShe
  const {data:curriculum,error:contentError}=await supabase.from('curriculum').select('lessons,events,undated,meta').eq('id','tjsp2607').single();
  if(contentError||!curriculum?.lessons?.length){active=false;showPublic('login','Os conteúdos ainda não foram configurados no Supabase. Avise o administrador.');return;}
  window.TECA_LESSONS=curriculum.lessons;window.TECA_EVENTS=curriculum.events;window.TECA_UNDATED=curriculum.undated;window.TECA_META=curriculum.meta;
- document.querySelector('.topbar .top-info').textContent=`Olá, ${profile.full_name.split(' ')[0]} · TJSP2607 · Versão 3.4`;
+ document.querySelector('.topbar .top-info').textContent=`Olá, ${profile.full_name.split(' ')[0]} · TJSP2607 · Versão 3.5`;
  await new Promise((resolve,reject)=>{let script=document.createElement('script');script.src='academy.js';script.onload=resolve;script.onerror=reject;document.body.append(script)});
 }
 function queueSave(state){if(!active||!supabase||!account?.approved)return;savePending=state;clearTimeout(saveTimer);saveTimer=setTimeout(flushSave,1100)}

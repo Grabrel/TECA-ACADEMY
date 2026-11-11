@@ -1,0 +1,505 @@
+{
+  "videos": [
+    {
+      "id": "crase-area",
+      "title": "Área proibida de crase",
+      "topic": "Crase",
+      "url": "https://www.youtube.com/watch?v=l0JoOwA8aV4",
+      "source": "YouTube — Qconcursos",
+      "note": "Casos em que não se usa o acento grave.",
+      "videoId": "l0JoOwA8aV4",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "crase-especiais",
+      "title": "Crase: situações especiais",
+      "topic": "Crase",
+      "url": "https://www.youtube.com/watch?v=7rHENtqyqqM",
+      "source": "YouTube — Qconcursos",
+      "note": "Situações particulares de emprego do acento grave.",
+      "videoId": "7rHENtqyqqM",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "crase-ibge",
+      "title": "Questões de crase — IBGE",
+      "topic": "Crase",
+      "url": "https://www.qconcursos.com/video/concurso-ibge-aula-de-portugues-questoes-de-crase-11o",
+      "source": "Qconcursos — aula pública",
+      "note": "Aplicação do assunto em questões de prova.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "crase-intro",
+      "title": "Crase — aula introdutória",
+      "topic": "Crase",
+      "url": "https://www.qconcursos.com/video/aula-de-portugues-para-concursos-publicos-crase-axm",
+      "source": "Qconcursos — catálogo",
+      "note": "Registro público encontrado; confira a reprodução no site.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "crase-tecnica",
+      "title": "Crase: técnicas de análise",
+      "topic": "Crase",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-publicos-crase-tecnicas-de-analise-hgy",
+      "source": "Qconcursos — aula pública",
+      "note": "Estratégias para diagnosticar crase.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "regencia-vunesp-1",
+      "title": "Vunesp — pronome relativo e preposição (questão 1)",
+      "topic": "Regência e pronomes relativos",
+      "url": "https://youtu.be/z90vXQEjp8w",
+      "source": "Blog pessoal do professor",
+      "note": "Questão Vunesp comentada, sobre regência e pronome relativo.",
+      "videoId": "z90vXQEjp8w",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "regencia-vunesp-2",
+      "title": "Vunesp — pronome relativo e preposição (questão 2)",
+      "topic": "Regência e pronomes relativos",
+      "url": "https://youtu.be/QZRMLJiriiA",
+      "source": "Blog pessoal do professor",
+      "note": "Segunda questão comentada da Vunesp.",
+      "videoId": "QZRMLJiriiA",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "regencia-zero",
+      "title": "Regência verbal do zero — Correios",
+      "topic": "Regência",
+      "url": "https://www.qconcursos.com/video/aula-de-portugues-para-o-concurso-correios-regencia-verbal-do-0-bwo",
+      "source": "Qconcursos — aula pública",
+      "note": "Introdução ao uso das preposições exigidas pelos verbos.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "regencia-pratica",
+      "title": "Regência — aula 1",
+      "topic": "Regência",
+      "url": "https://www.qconcursos.com/video/aula-de-portugues-para-concursos-publicos-regencia-1-qay",
+      "source": "Qconcursos — catálogo",
+      "note": "Pode redirecionar para o portal de lives; a publicação está registrada.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "morfossintaxe",
+      "title": "Morfossintaxe para concursos",
+      "topic": "Classes de palavras e sintaxe",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-publicos-morfossintaxe-ku4",
+      "source": "Qconcursos — aula pública",
+      "note": "Relaciona classe de palavra e função na oração.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "morfologia-verbal",
+      "title": "Morfologia verbal — Correios",
+      "topic": "Classes de palavras e verbos",
+      "url": "https://www.qconcursos.com/video/concurso-correios-aula-de-portugues-morfologia-verbal-okm",
+      "source": "Qconcursos — aula pública",
+      "note": "Foco nas formas e classes verbais.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "morfologia-ibge",
+      "title": "Estudos morfológicos — IBGE",
+      "topic": "Classes de palavras",
+      "url": "https://www.qconcursos.com/video/concurso-ibge-aula-de-portugues-estudos-morfologicos-apo",
+      "source": "Qconcursos — aula pública",
+      "note": "Revisão de morfologia.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "sintaxe-ibge",
+      "title": "Sintaxe — IBGE",
+      "topic": "Sintaxe e orações",
+      "url": "https://www.qconcursos.com/video/concurso-ibge-aula-de-portugues-sintaxe-3tk",
+      "source": "Qconcursos — aula pública",
+      "note": "Estrutura das orações.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "imperativo",
+      "title": "Formação do imperativo",
+      "topic": "Verbos",
+      "url": "https://www.qconcursos.com/video/formacao-do-imperativo-no-portugues-bbo",
+      "source": "Qconcursos — aula pública",
+      "note": "Forma verbal imperativa.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "concordancia",
+      "title": "Concordância verbal de A a Z — Transpetro",
+      "topic": "Concordância",
+      "url": "https://www.qconcursos.com/video/concurso-transpetro-aula-de-portugues-concordancia-verbal-de-a-a-z-ocs",
+      "source": "Qconcursos — aula pública",
+      "note": "Sujeito e flexão verbal, do básico às questões.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "pronomes-pessoais",
+      "title": "Pronomes pessoais",
+      "topic": "Pronomes",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-publicos-pronomes-pessoais-mxa",
+      "source": "Qconcursos — aula pública",
+      "note": "Emprego de pronomes pessoais.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "pronomes-atonos",
+      "title": "Pronome átono",
+      "topic": "Colocação pronominal",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-publicos-pronome-atono-tvq",
+      "source": "Qconcursos — aula pública",
+      "note": "Emprego de pronome átono; relevante à colocação pronominal.",
+      "videoId": null,
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "pronomes-atonos-2",
+      "title": "Pronome átono II",
+      "topic": "Colocação pronominal",
+      "url": "https://www.qconcursos.com/video/aula-de-portugues-para-concursos-pronome-atono-ii-gze",
+      "source": "Qconcursos — playlist",
+      "note": "Registro na playlist. Crédito individual do docente não explicitado na listagem.",
+      "videoId": null,
+      "scope": "indireto",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "textualidade",
+      "title": "Paralelismo sintático e semântico — questões",
+      "topic": "Coesão e textualidade",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-textualidade-paralelismo-sintatico-e-semantico-resolucao-de-questoes-zvu",
+      "source": "Qconcursos — playlist",
+      "note": "Registro na playlist, autoria individual não expressa no título.",
+      "videoId": null,
+      "scope": "indireto",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "voz-passiva-1",
+      "title": "Voz passiva — aula",
+      "topic": "Voz ativa e passiva",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-aula-de-lingua-portuguesa-voz-passiva-b4a",
+      "source": "Qconcursos — playlist",
+      "note": "Registro na playlist. Docência não confirmada na listagem.",
+      "videoId": null,
+      "scope": "indireto",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "voz-passiva-2",
+      "title": "Voz passiva analítica — do básico ao avançado",
+      "topic": "Voz ativa e passiva",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-voz-passiva-analitica-do-basico-ao-avancado-bja",
+      "source": "Qconcursos — playlist",
+      "note": "Registro na playlist. Docência não confirmada na listagem.",
+      "videoId": null,
+      "scope": "indireto",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "voz-passiva-3",
+      "title": "Voz passiva sintética — base e questões",
+      "topic": "Voz ativa e passiva",
+      "url": "https://www.qconcursos.com/video/portugues-para-concursos-voz-passiva-sintetica-base-teorica-e-questoes-recorrentes-16c",
+      "source": "Qconcursos — playlist",
+      "note": "Registro na playlist. Docência não confirmada na listagem.",
+      "videoId": null,
+      "scope": "indireto",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "revisao-cesgranrio-1",
+      "title": "Revisão Cesgranrio — questões comentadas, parte 1",
+      "topic": "Revisão mista",
+      "url": "https://youtu.be/B0yqisFQXFw",
+      "source": "Blog pessoal do professor",
+      "note": "Comentários de questões de Português da Cesgranrio.",
+      "videoId": "B0yqisFQXFw",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "revisao-cesgranrio-2",
+      "title": "Revisão Cesgranrio — questões comentadas, parte 2",
+      "topic": "Revisão mista",
+      "url": "https://youtu.be/NrvuDkogCio",
+      "source": "Blog pessoal do professor",
+      "note": "Comentários de questões de Português da Cesgranrio.",
+      "videoId": "NrvuDkogCio",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "ortografia-porque-1",
+      "title": "Uso dos porquês — questão comentada 1",
+      "topic": "Conjunções e ortografia",
+      "url": "https://www.youtube.com/watch?v=ZLncKdjvVHo",
+      "source": "Blog pessoal do professor",
+      "note": "Questão FCC sobre emprego dos porquês.",
+      "videoId": "ZLncKdjvVHo",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "ortografia-porque-2",
+      "title": "Uso dos porquês — questão comentada 2",
+      "topic": "Conjunções e ortografia",
+      "url": "https://www.youtube.com/watch?v=Ca7u5HesW2M",
+      "source": "Blog pessoal do professor",
+      "note": "Questão de emprego dos porquês.",
+      "videoId": "Ca7u5HesW2M",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "ortografia-porque-3",
+      "title": "Uso dos porquês — questão comentada 3",
+      "topic": "Conjunções e ortografia",
+      "url": "https://www.youtube.com/watch?v=IdikOgnJLK8",
+      "source": "Blog pessoal do professor",
+      "note": "Questão UFPR sobre emprego dos porquês.",
+      "videoId": "IdikOgnJLK8",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    },
+    {
+      "id": "orientacoes-cespe",
+      "title": "Orientações para a prova de Português do Cespe",
+      "topic": "Estratégia de prova",
+      "url": "https://www.youtube.com/watch?v=K4ilFbAvTP4",
+      "source": "Blog pessoal do professor",
+      "note": "Dicas da banca Cebraspe; diferente da Vunesp.",
+      "videoId": "K4ilFbAvTP4",
+      "scope": "exato",
+      "creator": "João Bolognesi",
+      "checkedBy": "título, autoria e descrição pública (não transcrição integral)"
+    }
+  ],
+  "readings": [
+    {
+      "title": "Revisão Vunesp — questões comentadas (PDF)",
+      "topic": "Revisão Vunesp",
+      "url": "https://joaobolognesi.wordpress.com/2017/06/09/revisao-vunesp/",
+      "type": "texto"
+    },
+    {
+      "title": "1ª lição de crase — teoria do professor",
+      "topic": "Crase",
+      "url": "https://joaobolognesi.wordpress.com/2016/01/27/1a-licao-de-crase/",
+      "type": "texto"
+    },
+    {
+      "title": "Pontuação — textos comentados",
+      "topic": "Pontuação",
+      "url": "https://joaobolognesi.wordpress.com/category/pontuacao/",
+      "type": "texto"
+    },
+    {
+      "title": "Concordância — revisão comentada",
+      "topic": "Concordância",
+      "url": "https://joaobolognesi.wordpress.com/category/concordancia-verbal/",
+      "type": "texto"
+    },
+    {
+      "title": "Regência verbal — passo a passo",
+      "topic": "Regência",
+      "url": "https://joaobolognesi.wordpress.com/category/regencia-verbal/",
+      "type": "texto"
+    },
+    {
+      "title": "Textos e semântica — blog do professor",
+      "topic": "Interpretação e semântica",
+      "url": "https://joaobolognesi.wordpress.com/",
+      "type": "texto"
+    },
+    {
+      "title": "Conjunções — revisão comentada do professor",
+      "topic": "Conjunções",
+      "url": "https://joaobolognesi.wordpress.com/category/conjuncao/",
+      "type": "texto"
+    }
+  ],
+  "lessonMap": {
+    "u4": {
+      "label": "Interpretação e inferência",
+      "ids": [],
+      "reading": null
+    },
+    "u5": {
+      "label": "Tema, tese e argumentação",
+      "ids": [],
+      "reading": null
+    },
+    "u6": {
+      "label": "Conjunções e relações lógicas",
+      "ids": [],
+      "reading": 6
+    },
+    "u7": {
+      "label": "Coesão e referência pronominal",
+      "ids": [],
+      "reading": null
+    },
+    "u8": {
+      "label": "Sentidos contextual, literal e figurado",
+      "ids": [],
+      "reading": null
+    },
+    "u9": {
+      "label": "Concordância verbal",
+      "ids": [
+        "concordancia"
+      ],
+      "reading": 3
+    },
+    "u10": {
+      "label": "Crase",
+      "ids": [
+        "crase-area",
+        "crase-especiais",
+        "crase-ibge"
+      ],
+      "reading": 1
+    },
+    "u11": {
+      "label": "Pontuação e vírgula",
+      "ids": [],
+      "reading": 2
+    },
+    "u12": {
+      "label": "Regência e pronomes",
+      "ids": [
+        "regencia-zero",
+        "regencia-vunesp-1",
+        "pronomes-atonos"
+      ],
+      "reading": 4
+    },
+    "u67": {
+      "label": "Fato, opinião e inferência",
+      "ids": [],
+      "reading": null
+    },
+    "u68": {
+      "label": "Ambiguidade e reescrita",
+      "ids": [],
+      "reading": null
+    },
+    "u69": {
+      "label": "Orações e conectivos",
+      "ids": [],
+      "reading": null
+    },
+    "u70": {
+      "label": "Voz ativa e passiva",
+      "ids": [],
+      "reading": null
+    },
+    "u71": {
+      "label": "Concordância nominal e paralelismo",
+      "ids": [],
+      "reading": null
+    },
+    "u72": {
+      "label": "Pronomes relativos e coesão",
+      "ids": [
+        "regencia-vunesp-2",
+        "regencia-vunesp-1"
+      ],
+      "reading": 4
+    },
+    "u73": {
+      "label": "Regência verbal",
+      "ids": [
+        "regencia-zero",
+        "regencia-vunesp-1"
+      ],
+      "reading": 4
+    },
+    "u74": {
+      "label": "Colocação pronominal",
+      "ids": [
+        "pronomes-atonos"
+      ],
+      "reading": 4
+    },
+    "u75": {
+      "label": "Pontuação: aposto e vocativo",
+      "ids": [],
+      "reading": 2
+    },
+    "u76": {
+      "label": "Pressupostos, subentendidos e semântica",
+      "ids": [],
+      "reading": null
+    }
+  },
+  "teacher": {
+    "name": "João Bolognesi",
+    "blog": "https://joaobolognesi.wordpress.com/",
+    "playlist": "https://www.qconcursos.com/playlist/portugues-para-concursos-publicos-dk_",
+    "notes": "Vídeos públicos encontrados no blog do docente e em playlists Qconcursos. A lista não é um censo exaustivo do YouTube; títulos genéricos sem tema identificável foram deixados de fora. Catálogo curado a partir de metadados públicos; não alegamos assistir ao conteúdo integral ou verificar legendas."
+  }
+}
