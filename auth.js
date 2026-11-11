@@ -1,4 +1,4 @@
-/* Teca Academia 3.3 — autenticação por usuário, sem pedir e-mail. */
+/* Teca Academia 3.4 — autenticação por usuário, sem pedir e-mail. */
 'use strict';
 const CFG=window.TECA_CONFIG||{};
 const configured=/^https:\/\/[^\s]+\.supabase\.co\/?$/.test(CFG.supabaseUrl||'') && /^sb_publishable_/.test(CFG.publishableKey||'');
@@ -16,9 +16,51 @@ const applyTheme=(theme)=>{
   const t=theme==='dark'?'dark':'light';root.dataset.theme=t;
   localStorage.setItem('teca_color_scheme',t);
   document.querySelectorAll('[data-theme-toggle]').forEach(el=>el.textContent=t==='dark'?'Modo claro':'Modo escuro');
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#24343d':'#344752');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#24343d':'#ffffff');
 };
 applyTheme(localStorage.getItem('teca_color_scheme')||'light');
+// Navegação: a barra inferior é um atalho; o botão Menu abre as oito seções no celular.
+const mobileMenuButton=document.getElementById('mobile-menu-trigger');
+const mobileMenuClose=document.getElementById('mobile-menu-close');
+const mobileMenuBackdrop=document.getElementById('mobile-nav-backdrop');
+const mobileSidebar=document.getElementById('academy-sidebar');
+const mobileQuery=window.matchMedia('(max-width: 820px)');
+let mobileMenuOpen=false;
+function syncMobileMenu(){
+ const isMobile=mobileQuery.matches;
+ document.body.classList.toggle('mobile-nav-open',isMobile&&mobileMenuOpen);
+ mobileMenuButton.setAttribute('aria-expanded',String(isMobile&&mobileMenuOpen));
+ mobileMenuButton.setAttribute('aria-label',mobileMenuOpen?'Fechar o menu de navegação':'Abrir o menu de navegação');
+ mobileSidebar.inert=isMobile&&!mobileMenuOpen;
+ mobileMenuBackdrop.hidden=!(isMobile&&mobileMenuOpen);
+}
+function closeMobileMenu(returnFocus=false){
+ const wasOpen=mobileMenuOpen;
+ mobileMenuOpen=false;syncMobileMenu();
+ if(wasOpen&&returnFocus&&mobileQuery.matches&&!academyShell.hidden)mobileMenuButton.focus();
+}
+mobileMenuButton.addEventListener('click',()=>{
+ mobileMenuOpen=!mobileMenuOpen;syncMobileMenu();
+ if(mobileMenuOpen)mobileMenuClose.focus();
+});
+mobileMenuClose.addEventListener('click',()=>closeMobileMenu(true));
+mobileMenuBackdrop.addEventListener('click',()=>closeMobileMenu(true));
+document.addEventListener('keydown',e=>{
+ if(!mobileMenuOpen)return;
+ if(e.key==='Escape'){e.preventDefault();closeMobileMenu(true);return;}
+ if(e.key==='Tab'){
+  const focusables=[...mobileSidebar.querySelectorAll('button:not([disabled]),a[href],input:not([disabled])')].filter(el=>el.getClientRects().length);
+  const first=focusables[0],last=focusables[focusables.length-1];
+  if(!first||!last)return;
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+ }
+});
+document.addEventListener('click',e=>{
+ if(e.target.closest('#academy-sidebar [data-route]'))closeMobileMenu(false);
+});
+mobileQuery.addEventListener('change',()=>{mobileMenuOpen=false;syncMobileMenu()});
+syncMobileMenu();
 document.addEventListener('click',(e)=>{
  const theme=e.target.closest('[data-theme-toggle]');if(theme){applyTheme(root.dataset.theme==='dark'?'light':'dark');return;}
  const nav=e.target.closest('[data-public]');if(nav){showPublic(nav.dataset.public);return;}
@@ -27,7 +69,7 @@ document.getElementById('brand-home').addEventListener('click',e=>{e.preventDefa
 const mainLink='<a target="_blank" rel="noreferrer" href="https://www.vunesp.com.br/TJSP2607">Página oficial do concurso</a>';
 const intro=`<div class="welcome-grid"><section class="intro-box"><div class="eyebrow">Bem-vindo à Teca Academia</div><h1>Um jeito mais claro de estudar para concursos.</h1><p>Estude em pequenas etapas, entenda o motivo das respostas e acompanhe sua evolução, sozinho ou com amigos.</p><div class="intro-actions"><button type="button" class="solid-btn" data-public="register">Pedir acesso</button><button type="button" class="subtle-btn" data-public="login">Já tenho cadastro</button><button type="button" class="subtle-btn" data-public="about">Como funciona</button></div></section><aside class="welcome-panel"><div class="eyebrow">Sua rotina, com direção</div><h2>O que você encontra aqui</h2><div class="feature-step"><span class="feature-no">01</span><div><strong>Trilhas por matéria</strong><small>Primeiro você tenta, depois confere a explicação.</small></div></div><div class="feature-step"><span class="feature-no">02</span><div><strong>Missões do dia</strong><small>Atividades curtas que alternam diferentes assuntos.</small></div></div><div class="feature-step"><span class="feature-no">03</span><div><strong>Revisão e progresso</strong><small>XP por exercícios e explicações, sem cobrança exagerada.</small></div></div><div class="feature-step"><span class="feature-no">04</span><div><strong>Datas do edital</strong><small>Prazo de inscrição, prova, gabarito e etapas futuras.</small></div></div></aside></div><div class="banner-lite">A Teca é um projeto independente de estudos entre amigos. Consulte sempre os comunicados oficiais da Vunesp: ${mainLink}.</div>`;
 function showPublic(which='welcome',msg=''){
- currentPublic=which;publicShell.hidden=false;academyShell.hidden=true;academyMobile.hidden=true;
+ closeMobileMenu(false);currentPublic=which;publicShell.hidden=false;academyShell.hidden=true;academyMobile.hidden=true;
  document.getElementById('suggestion-text').disabled=true;suggestionForm.querySelector('button').disabled=true;
  if(which==='welcome')publicContent.innerHTML=intro;
  if(which==='about')publicContent.innerHTML=`<article class="article-card"><div class="eyebrow">Comece por aqui</div><h1>Como funciona a Teca</h1><p>Você não precisa conhecer nenhum método de estudo. O objetivo é simples: aprender a resolver questões entendendo o princípio por trás de cada resposta.</p><section><h3>1. Crie seu cadastro</h3><p>Informe seu nome completo, um nome de usuário e uma senha. O acesso será liberado manualmente pelo criador da academia.</p></section><section><h3>2. Escolha sua primeira missão</h3><p>Faça o desafio antes da teoria. Depois leia a explicação, justifique a escolha e tente aplicar a regra em um caso diferente.</p></section><section><h3>3. Pratique aos poucos</h3><p>As missões misturam matérias e ajudam a revisar aquilo que merece atenção. Estudar em dias diferentes conta mais do que decorar um gabarito.</p></section><section><h3>4. Acompanhe edital e resultados</h3><p>O calendário apresenta as datas oficiais e informa quando horários ou etapas ainda não foram publicados.</p></section><p class="muted-note">Este é um espaço independente, sem vínculo com o TJ-SP ou a Vunesp. ${mainLink}.</p><div class="intro-actions"><button class="solid-btn" type="button" data-public="register">Solicitar acesso</button><button class="subtle-btn" type="button" data-public="welcome">Voltar ao início</button></div></article>`;
@@ -41,14 +83,14 @@ function showMsg(msg,isError=false){const el=document.getElementById('auth-statu
 async function getClient(){if(supabase)return supabase;if(!configured)throw Error('Supabase ainda não configurado. Abra o guia de instalação.');const mod=await import('https://esm.sh/@supabase/supabase-js@2.57.0?bundle');supabase=mod.createClient(CFG.supabaseUrl,CFG.publishableKey,{auth:{autoRefreshToken:true,persistSession:true,detectSessionInUrl:false}});return supabase;}
 async function profileFor(user){const {data,error}=await supabase.from('profiles').select('id,full_name,username,approved').eq('id',user.id).single();if(error)throw error;return data;}
 async function checkSession(){if(!configured){showPublic('welcome');return;}try{await getClient();const {data:{user},error}=await supabase.auth.getUser();if(error||!user){showPublic('welcome');return;}account=await profileFor(user);if(!account.approved){showPublic('pending');return;}await startAcademy(user,account);}catch(err){console.error(err);showPublic('login','Não foi possível verificar sua sessão. Tente entrar novamente.');}}
-async function startAcademy(user,profile){if(active)return;active=true;publicShell.hidden=true;academyShell.hidden=false;academyMobile.hidden=false;window.TECA_USER_ID=user.id;window.TECA_ON_SAVE=queueSave;
+async function startAcademy(user,profile){if(active)return;active=true;publicShell.hidden=true;academyShell.hidden=false;academyMobile.hidden=false;syncMobileMenu();window.TECA_USER_ID=user.id;window.TECA_ON_SAVE=queueSave;
  document.getElementById('suggestion-text').disabled=false;suggestionForm.querySelector('button').disabled=false;
  const id=`teca_academia_v3_tjsp2607_${user.id}`;
  try{const {data,error}=await supabase.from('study_state').select('payload').eq('user_id',user.id).maybeSingle();if(error)throw error;if(data?.payload) localStorage.setItem(id,JSON.stringify(data.payload));}catch(err){console.warn('Não foi possível sincronizar o progresso remoto',err);}
  const {data:curriculum,error:contentError}=await supabase.from('curriculum').select('lessons,events,undated,meta').eq('id','tjsp2607').single();
  if(contentError||!curriculum?.lessons?.length){active=false;showPublic('login','Os conteúdos ainda não foram configurados no Supabase. Avise o administrador.');return;}
  window.TECA_LESSONS=curriculum.lessons;window.TECA_EVENTS=curriculum.events;window.TECA_UNDATED=curriculum.undated;window.TECA_META=curriculum.meta;
- document.querySelector('.topbar .top-info').textContent=`Olá, ${profile.full_name.split(' ')[0]} · TJSP2607 · Versão 3.3`;
+ document.querySelector('.topbar .top-info').textContent=`Olá, ${profile.full_name.split(' ')[0]} · TJSP2607 · Versão 3.4`;
  await new Promise((resolve,reject)=>{let script=document.createElement('script');script.src='academy.js';script.onload=resolve;script.onerror=reject;document.body.append(script)});
 }
 function queueSave(state){if(!active||!supabase||!account?.approved)return;savePending=state;clearTimeout(saveTimer);saveTimer=setTimeout(flushSave,1100)}

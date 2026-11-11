@@ -1,0 +1,20 @@
+Teca Academia — Versão 3.4 (modo claro e navegação no celular)
+
+O que mudou:
+- Cartões, atividades e calendário utilizam agora fundos claros e textos legíveis no tema claro.
+- Barra superior, botões, recompensas e indicadores padronizados no modo claro.
+- Menu completo no celular: botão Menu no topo abre lateral com oito seções.
+- Fechar por botão, toque fora ou tecla Escape.
+- Barra inferior de atalhos mantida; áreas menos acessíveis agora aparecem no menu.
+- Tema escuro preservado.
+- Nenhuma modificação no banco Supabase, funções de acesso, progresso ou lógica das missões.
+- Cache do PWA atualizado para carregar o CSS novo.
+
+Como publicar:
+1. Extraia o ZIP.
+2. Envie o CONTEÚDO da pasta extraída para a raiz do repositório GitHub Pages.
+3. Confirme o commit no GitHub.
+4. Atualize o site com Ctrl + Shift + R.
+
+OBS.: config.js contém apenas a URL e a publishable key públicas, e pode ir ao GitHub.
+NÃO envie nenhuma chave secreta, service_role, .env ou arquivo de backup pessoal.

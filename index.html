@@ -1,11 +1,13 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#253846"><meta name="description" content="Teca Academia — plataforma independente de estudos por princípios para concursos públicos."><title>Teca Academia 3.3 — TJ-SP</title><link rel="icon" type="image/png" href="assets/nara-mark.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="academy-base.css"><link rel="stylesheet" href="theme.css"></head><body>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#253846"><meta name="description" content="Teca Academia — plataforma independente de estudos por princípios para concursos públicos."><title>Teca Academia 3.4 — TJ-SP</title><link rel="icon" type="image/png" href="assets/nara-mark.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="academy-base.css"><link rel="stylesheet" href="theme.css"></head><body>
 <div id="public-shell" class="public-shell">
  <header class="site-header"><a href="#" id="brand-home" class="brand"><img src="assets/nara-mark.png" alt="Símbolo da Teca Academia"><span><b>Teca Academia</b><small>Estudar para compreender</small></span></a><nav class="site-nav"><button type="button" data-public="welcome">Início</button><button type="button" data-public="about">Como funciona</button><a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Edital</a></nav><div class="public-actions"><button type="button" class="theme-toggle" data-theme-toggle>Modo escuro</button><button type="button" class="subtle-btn" data-public="login">Entrar</button><button type="button" class="solid-btn" data-public="register">Criar conta</button></div></header>
  <main id="public-content" class="public-content" tabindex="-1"></main>
 </div>
 
   <div class="shell" id="academy-shell" hidden>
-    <aside class="sidebar" aria-label="Navegação principal">
+    <button class="mobile-nav-backdrop" id="mobile-nav-backdrop" type="button" hidden aria-label="Fechar o menu de navegação"></button>
+    <aside class="sidebar" id="academy-sidebar" aria-label="Navegação principal">
+      <button class="mobile-menu-close" id="mobile-menu-close" type="button" aria-label="Fechar menu de navegação">✕ <span>Fechar menu</span></button>
       <div class="logo"><img class="brand-mark" src="assets/nara-mark.png" alt="Símbolo da Teca Academia"><div><strong>Teca<span class="mint">.Academia</span></strong><small>Temporada TJ-SP · 2026/27</small></div></div>
       <p class="side-label">ÁREA DO JOGADOR</p>
       <nav class="main-nav">
@@ -24,8 +26,9 @@
     </aside>
     <div class="body-column">
       <header class="topbar">
+        <button class="mobile-menu-trigger" id="mobile-menu-trigger" type="button" aria-controls="academy-sidebar" aria-expanded="false" aria-label="Abrir o menu de navegação"><span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="mobile-menu-caption">Menu</span></button>
         <div class="mobile-brand"><img class="brand-mark small" src="assets/nara-mark.png" alt=""><b>TECA ACADEMIA</b></div>
-        <div class="top-info"><span class="status-dot"></span> TJSP2607 · Edital nº 02/2026 <span class="dim">• Versão 3.3</span></div>
+        <div class="top-info"><span class="status-dot"></span> TJSP2607 · Edital nº 02/2026 <span class="dim">• Versão 3.4</span></div>
         <div class="top-right"><button class="theme-toggle" data-theme-toggle type="button" title="Alternar tema">Modo escuro</button><button id="logout-btn" type="button" class="logout-btn">Sair</button><span id="header-date"></span><span class="xp-badge" id="header-xp">0 XP</span></div>
       </header>
       <main id="app" class="content" tabindex="-1"><div class="loading">Carregando sua academia…</div></main>
@@ -42,5 +45,5 @@
  <div><b>Sobre a Teca</b><p>Projeto independente de estudos para concursos, criado para amigos e colegas. Não vinculado à Vunesp ou ao TJ-SP.</p></div>
  <div><b>Perfil profissional</b><p><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gabriel-almeida-12259b260">LinkedIn</a><br><a target="_blank" rel="noreferrer" href="https://substack.com/@grabrel">Substack @grabrel</a></p></div>
  <div><b>Ajude a melhorar</b><p>Notou algum erro ou tem uma ideia? Envie uma sugestão.</p><form id="suggestion-form"><textarea id="suggestion-text" rows="2" maxlength="1000" placeholder="Sua sugestão (somente membros aprovados)" disabled></textarea><button class="solid-btn" disabled>Enviar sugestão</button><span id="suggestion-status" role="status"></span></form></div>
-</div><div class="footer-bottom">Teca Academia 3.3 <span>•</span> Projeto de estudo independente <span>•</span> <a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Fonte oficial: Vunesp</a></div></footer>
+</div><div class="footer-bottom">Teca Academia 3.4 <span>•</span> Projeto de estudo independente <span>•</span> <a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Fonte oficial: Vunesp</a></div></footer>
 <script src="config.js"></script><script type="module" src="auth.js"></script></body></html>
