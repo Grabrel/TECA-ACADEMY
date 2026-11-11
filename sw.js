@@ -1,4 +1,4 @@
-const VERSION='teca-tjsp-v3.1-20261111-autossuficiente';
+const VERSION='teca-tjsp-v3.2-20261111-missoes-restauradas';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./assets/icon.svg','./calendario_tjsp2607.ics'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(VERSION).then(async cache=>{await cache.addAll(ASSETS)}).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(x=>x!==VERSION&&x.startsWith('teca-tjsp-')).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});

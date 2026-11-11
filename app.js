@@ -1,4 +1,4 @@
-/* TECA ACADEMIA 3.1 — conteúdo embutido no index.html para evitar trilhas vazias no GitHub Pages. */
+/* TECA ACADEMIA 3.2 — restaura missões antigas com IDs vazios sem apagar histórico. */
 (()=>{'use strict';
 const LESSONS=window.TECA_LESSONS||[], EVENTS=window.TECA_EVENTS||[], UNDATED=window.TECA_UNDATED||[], META=window.TECA_META||{};
 const KEY='teca_academia_v3_tjsp2607';
@@ -31,14 +31,28 @@ function hash(s){let n=0;for(const c of s)n=(Math.imul(31,n)+c.charCodeAt(0))|0;
 function pickLesson(cat,seed,used=[]){let opts=LESSONS.filter(l=>(!cat||l.cat===cat)&&!used.includes(l.id));if(!opts.length)return null;
  const today=day(); const arr=opts.map(l=>({l,p:S.progress[l.id],h:hash(seed+l.id)}));
  arr.sort((a,b)=>{let sa=a.p?(a.p.nextDue<=today?0:2):1;let sb=b.p?(b.p.nextDue<=today?0:2):1;return sa-sb||a.h-b.h});return arr[0].l;}
+// Corrige missões antigas gravadas quando a versão 3.0 estava sem aulas.
+// Mantém XP e histórico intactos e preserva missões válidas ao reconstruir o plano.
+function validMission(m){return !!(m && typeof m.id==='string' && LESSONS.some(l=>l.id===m.id && l.cat===m.cat));}
 function dailyPlan(d=day()){
- if(S.dailyPlans[d])return S.dailyPlans[d];
+ const old=Array.isArray(S.dailyPlans[d]) ? S.dailyPlans[d] : [];
+ if(old.length===4 && old.every(validMission) && new Set(old.map(m=>m.id)).size===4)return old;
  const i=hash(d)%5, used=[];
- const cats=['Direito','Português', ['Lógica','Matemática','Informática','Gerais','Redação'][i]];
- let plan=cats.map((cat,k)=>{let l=pickLesson(cat,d+'-'+k,used);if(l)used.push(l.id);return {id:l?.id||'',cat,kind:k===2?'explore':'quest',name:k===0?'Lei em ação':k===1?'Armadilhas da banca':'Exploração interdisciplinar'};});
- const lastDue=dueLessons().find(l=>!used.includes(l.id));let fourth=lastDue||pickLesson(null,d+'-review',used);
+ const cats=['Direito','Português',['Lógica','Matemática','Informática','Gerais','Redação'][i]];
+ const names=['Lei em ação','Armadilhas da banca','Exploração interdisciplinar'];
+ const plan=cats.map((cat,k)=>{
+   const candidate=validMission(old[k]) && old[k].cat===cat && !used.includes(old[k].id)
+      ? LESSONS.find(l=>l.id===old[k].id) : pickLesson(cat,d+'-'+k,used);
+   if(candidate)used.push(candidate.id);
+   return {id:candidate?.id||'',cat:candidate?.cat||cat,kind:k===2?'explore':'quest',name:names[k]};
+ });
+ const lastValid=validMission(old[3]) && !used.includes(old[3].id)
+   ? LESSONS.find(l=>l.id===old[3].id) : null;
+ const fourth=lastValid || dueLessons().find(l=>!used.includes(l.id)) || pickLesson(null,d+'-review',used);
  plan.push({id:fourth?.id||'',cat:fourth?.cat||'Direito',kind:'review',name:'Revisão de domínio'});
- S.dailyPlans[d]=plan;save();return plan;
+ S.dailyPlans[d]=plan;
+ save();
+ return plan;
 }
 function missionDone(item,d=day()){return S.history.some(h=>h.date===d&&h.id===item.id)}
 function weekStart(d=day()){let dt=parse(d);let wd=(dt.getDay()+6)%7;dt.setDate(dt.getDate()-wd);return day(dt)}
@@ -48,7 +62,7 @@ function examDays(){let n=Math.ceil((parse(META.examDate)-parse(day()))/86400000
 function progBar(p){return `<div class="progress"><span style="width:${Math.max(0,Math.min(100,p))}%"></span></div>`}
 function badge(s,type=''){return `<span class="pill ${type}">${clean(s)}</span>`}
 function route(r){page=r;notice='';render();window.scrollTo({top:0,behavior:'smooth'})}
-function openLesson(id){const l=LESSONS.find(x=>x.id===id);if(!l)return;active={id,choice:null,justification:'',transfer:'',stage:'answer',message:''};page='study';render();window.scrollTo({top:0,behavior:'smooth'})}
+function openLesson(id){const l=LESSONS.find(x=>x.id===id);if(!l){notice='Esta missão estava desatualizada. Recriei o plano do dia; tente novamente.';delete S.dailyPlans[day()];dailyPlan();save();page='home';render();return;}active={id,choice:null,justification:'',transfer:'',stage:'answer',message:''};page='study';render();window.scrollTo({top:0,behavior:'smooth'})}
 function updateUI(){document.querySelectorAll('[data-route]').forEach(x=>{x.classList.toggle('active',x.dataset.route===page)});document.getElementById('header-xp').textContent=`✦ ${xp()} XP`;document.getElementById('header-date').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'short',day:'2-digit',month:'short'}).format(new Date());}
 function render(){updateUI();let html='';switch(page){case'home':html=renderHome();break;case'trails':html=renderTrails();break;case'learncat':html=renderCategory();break;case'study':html=renderStudy();break;case'review':html=renderReview();break;case'calendar':html=renderCalendar();break;case'method':html=renderMethod();break;case'settings':html=renderSettings();break;default:html=renderHome()};app.innerHTML=(notice?`<div class="notice" role="status">${clean(notice)}</div>`:'')+html;}
 function renderHome(){const l=level(),d=day(),plan=dailyPlan(),ws=weekStats(),cd=examDays(),numToday=historyFor(d).length,done=plan.filter(it=>missionDone(it)).length,mastered=Object.keys(S.progress).filter(id=>(S.progress[id]?.streak||0)>=3).length;

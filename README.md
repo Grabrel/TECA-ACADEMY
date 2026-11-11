@@ -1,10 +1,18 @@
-# Teca Academia 3.1 — TJ-SP / GitHub Pages
+# Teca Academia 3.2 — TJ-SP / GitHub Pages
+
+## Correção das missões que não abriam (3.2)
+
+Se a versão 3.0 foi aberta quando os arquivos `data/lessons.js` não carregavam, ela salvou o plano do dia com IDs vazios (`id: ""`). Na versão 3.1, mesmo após carregar todas as aulas, os botões "Começar" ainda não encontravam o conteúdo e nada acontecia.
+
+**A versão 3.2 valida as missões salvas e reconstrói automaticamente apenas planos inválidos.** Ela mantém o histórico, o XP, os intervalos de revisão e as missões válidas, sem exigir limpeza dos dados do navegador. Também mostra uma mensagem e regenera o plano se um botão tentar abrir algum identificador obsoleto.
+
+**Como testar:** abra a tela inicial e confirme que cada missão mostra um título concreto de aula (não "Conteúdo disponível"). Clique em cada botão "Começar": deve abrir uma questão com alternativas e campo de justificativa.
 
 ## Correção crítica
 
 A versão 3.0 podia abrir a interface, mas mostrar **0 de 0 princípios** e calendário vazio quando `data/lessons.js` e `data/events.js` não eram enviados para o GitHub Pages, eram publicados fora da pasta `data/`, ou eram carregados de uma versão antiga em cache.
 
-A 3.1 coloca **113 desafios**, **14 eventos datados do edital** e **3 eventos aguardando publicação** diretamente dentro de `index.html`. Assim, as trilhas e calendário funcionam mesmo que os arquivos auxiliares não sejam enviados. O pacote também mostra os quatro próximos marcos do edital e uma lista cronológica de eventos, independentemente do dia selecionado.
+A 3.2 coloca **113 desafios**, **14 eventos datados do edital** e **3 eventos aguardando publicação** diretamente dentro de `index.html`. Assim, as trilhas e calendário funcionam mesmo que os arquivos auxiliares não sejam enviados. O pacote também mostra os quatro próximos marcos do edital e uma lista cronológica de eventos, independentemente do dia selecionado.
 
 ## Atualização do repositório existente
 
