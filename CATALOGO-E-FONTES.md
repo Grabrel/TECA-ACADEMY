@@ -1,4 +1,4 @@
-# Teca Academia 3.5 — Curadoria de aulas de João Bolognesi
+# Teca Academia 3.6 — Curadoria de aulas de João Bolognesi
 
 **Escopo real:** o levantamento consultou o arquivo da categoria YouTube do blog pessoal do professor, a playlist de Português do Qconcursos e playlists temáticas de Correios, IBGE e Transpetro. Não houve acesso a uma listagem integral e confiável de todos os uploads do canal do professor, nem visualização/escuta integral de todos os vídeos. As classificações foram feitas por título, autoria indicada, descrição pública e contexto do blog. Títulos genéricos e aulas sem docente confirmado não foram mapeados para erros automaticamente. Vídeos podem mudar de disponibilidade no futuro. Registros de portal que redirecionam são mantidos apenas como referência, não assegurados para reprodução.
 
