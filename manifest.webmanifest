@@ -1,11 +1,24 @@
 {
- "name":"Teca Academia 3.1 — TJ-SP 2026/2027",
- "short_name":"Teca TJ-SP",
- "start_url":"./index.html",
- "display":"standalone",
- "background_color":"#081722",
- "theme_color":"#071723",
- "description":"Missões, XP, revisões e calendário do concurso TJ-SP Escrevente",
- "lang":"pt-BR",
- "icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "name": "Teca Academia — Preparação TJ-SP",
+  "short_name": "Teca Academia",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f9f6",
+  "theme_color": "#253846",
+  "lang": "pt-BR",
+  "description": "Aprendizagem ativa, simulados e calendário para TJ-SP",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

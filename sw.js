@@ -1,5 +1,5 @@
-const VERSION='teca-tjsp-v3.2-20261111-missoes-restauradas';
-const ASSETS=['./','./index.html','./manifest.webmanifest','./assets/icon.svg','./calendario_tjsp2607.ics'];
-self.addEventListener('install',event=>{event.waitUntil(caches.open(VERSION).then(async cache=>{await cache.addAll(ASSETS)}).then(()=>self.skipWaiting()))});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(x=>x!==VERSION&&x.startsWith('teca-tjsp-')).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
-self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==location.origin)return;event.respondWith(fetch(event.request).then(response=>{if(response.ok){let copy=response.clone();caches.open(VERSION).then(cache=>cache.put(event.request,copy))}return response}).catch(()=>caches.match(event.request).then(found=>found||caches.match('./index.html'))))});
+const V='teca-academia-v3.3-nara-20261111';
+const ASSETS=['./','./index.html','./academy-base.css','./theme.css','./academy.js','./auth.js','./config.js','./manifest.webmanifest','./assets/nara-mark.png','./assets/icon-192.png','./assets/icon-512.png','./calendario_tjsp2607.ics'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(V).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('teca-')&&k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET'||new URL(r.url).origin!==location.origin)return;e.respondWith(fetch(r).then(res=>{if(res.ok)caches.open(V).then(c=>c.put(r,res.clone()));return res}).catch(()=>caches.match(r).then(hit=>hit||Response.error())))});
