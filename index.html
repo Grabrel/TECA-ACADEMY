@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#253846"><meta name="description" content="Teca Academia — plataforma independente de estudos por princípios para concursos públicos."><title>Teca Academia 3.7 — TJ-SP</title><link rel="icon" type="image/png" href="assets/nara-mark.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="academy-base.css?v=3.7"><link rel="stylesheet" href="theme.css?v=3.7"><link rel="stylesheet" href="social-v3.7.css?v=3.7"></head><body>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#253846"><meta name="description" content="Teca Academia — plataforma independente de estudos por princípios para concursos públicos."><title>Teca Academia 3.8 — TJ-SP</title><link rel="icon" type="image/png" href="assets/nara-mark.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="academy-base.css?v=3.8"><link rel="stylesheet" href="theme.css?v=3.8"><link rel="stylesheet" href="social-v3.7.css?v=3.8"><link rel="stylesheet" href="simulados-reais-v3.8.css?v=3.8"></head><body>
 <div id="public-shell" class="public-shell">
  <header class="site-header"><a href="#" id="brand-home" class="brand"><img src="assets/nara-mark.png" alt="Símbolo da Teca Academia"><span><b>Teca Academia</b><small>Estudar para compreender</small></span></a><nav class="site-nav"><button type="button" data-public="welcome">Início</button><button type="button" data-public="about">Como funciona</button><a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Edital</a></nav><div class="public-actions"><button type="button" class="theme-toggle" data-theme-toggle>Modo escuro</button><button type="button" class="subtle-btn" data-public="login">Entrar</button><button type="button" class="solid-btn" data-public="register">Criar conta</button></div></header>
  <main id="public-content" class="public-content" tabindex="-1"></main>
@@ -19,20 +19,21 @@
         <button class="nav" data-route="method"><span class="nav-icon">05</span> Como aprendemos</button>
         <button class="nav" data-route="videos"><span class="nav-icon">06</span> Material de apoio</button>
         <button class="nav" data-route="simulations" title="Mini-simulados"><span class="nav-icon">07</span> Mini-simulados</button>
-        <button class="nav" data-route="companions" title="Companheiros"><span class="nav-icon">08</span> Companheiros</button>
-        <button class="nav" data-route="chat" title="Sala de dúvidas e chat"><span class="nav-icon">09</span> Sala de dúvidas / Chat</button>
-        <button class="nav" data-route="profile" title="Meu perfil"><span class="nav-icon">10</span> Meu perfil</button>
+        <button class="nav" data-route="official-exams" title="Provas reais de concursos anteriores"><span class="nav-icon">08</span> Simulados reais · 70 questões</button>
+        <button class="nav" data-route="companions" title="Companheiros"><span class="nav-icon">09</span> Companheiros</button>
+        <button class="nav" data-route="chat" title="Sala de dúvidas e chat"><span class="nav-icon">10</span> Sala de dúvidas / Chat</button>
+        <button class="nav" data-route="profile" title="Meu perfil"><span class="nav-icon">11</span> Meu perfil</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="mini-note"><span>PRINCÍPIO DO ESTUDO</span><strong>Não decore a letra.</strong><small>Explique a regra, reconheça a exceção e aplique em um caso novo.</small></div>
-        <button class="nav" data-route="settings"><span class="nav-icon">11</span> Backup e ajustes</button>
+        <button class="nav" data-route="settings"><span class="nav-icon">12</span> Backup e ajustes</button>
       </div>
     </aside>
     <div class="body-column">
       <header class="topbar">
         <button class="mobile-menu-trigger" id="mobile-menu-trigger" type="button" aria-controls="academy-sidebar" aria-expanded="false" aria-label="Abrir o menu de navegação"><span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="mobile-menu-caption">Menu</span></button>
         <div class="mobile-brand"><img class="brand-mark small" src="assets/nara-mark.png" alt=""><b>TECA ACADEMIA</b></div>
-        <div class="top-info"><span class="status-dot"></span> TJSP2607 · Edital nº 02/2026 <span class="dim">• Versão 3.7</span></div>
+        <div class="top-info"><span class="status-dot"></span> TJSP2607 · Edital nº 02/2026 <span class="dim">• Versão 3.8</span></div>
         <div class="top-right"><button class="theme-toggle" data-theme-toggle type="button" title="Alternar tema">Modo escuro</button><button id="logout-btn" type="button" class="logout-btn">Sair</button><span id="header-date"></span><span class="xp-badge" id="header-xp">0 XP</span><button type="button" id="social-profile-shortcut" data-route="profile" aria-label="Abrir meu perfil">Perfil</button></div>
       </header>
       <main id="app" class="content" tabindex="-1"><div class="loading">Carregando sua academia…</div></main>
@@ -52,5 +53,5 @@
  <div><b>Sobre a Teca</b><p>Projeto independente de estudos para concursos, criado para amigos e colegas. Não vinculado à Vunesp ou ao TJ-SP.</p></div>
  <div><b>Perfil profissional</b><p><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gabriel-almeida-12259b260">LinkedIn</a><br><a target="_blank" rel="noreferrer" href="https://substack.com/@grabrel">Substack @grabrel</a></p></div>
  <div><b>Ajude a melhorar</b><p>Notou algum erro ou tem uma ideia? Envie uma sugestão.</p><form id="suggestion-form"><textarea id="suggestion-text" rows="2" maxlength="1000" placeholder="Sua sugestão (somente membros aprovados)" disabled></textarea><button class="solid-btn" disabled>Enviar sugestão</button><span id="suggestion-status" role="status"></span></form></div>
-</div><div class="footer-bottom">Teca Academia 3.7 <span>•</span> Projeto de estudo independente <span>•</span> <a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Fonte oficial: Vunesp</a></div></footer>
-<script src="config.js?v=3.7"></script><script src="bolognesi-library-v3.7.js"></script><script src="social-v3.7.js"></script><script type="module" src="auth-v3.7.js"></script></body></html>
+</div><div class="footer-bottom">Teca Academia 3.8 <span>•</span> Projeto de estudo independente <span>•</span> <a href="https://www.vunesp.com.br/TJSP2607" target="_blank" rel="noreferrer">Fonte oficial: Vunesp</a></div></footer>
+<script src="config.js?v=3.8"></script><script src="simulados-reais-v3.8.js?v=3.8"></script><script src="bolognesi-library-v3.7.js?v=3.8"></script><script src="social-v3.7.js?v=3.8"></script><script type="module" src="auth-v3.7.js?v=3.8"></script></body></html>
